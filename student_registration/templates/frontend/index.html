@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+    
+            background-color: lightgray;
+            border-radius: 10px;
+            margin: 10px;
+            box-shadow: 0 0 10px black;
+        }
+        button {
+            padding: 8px 15px;
+            border: none;
+            background-color: blue;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+         button:hover {
+            background-color: darkblue;
+        }
+        body{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="conainer">
+            <h1>Student Resgistration Form</h1>
+            <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">
+                save
+            </button>
+            </form>
+        </div>
+    </center>
+</body>
+</html>
